@@ -19,4 +19,4 @@ volumes:
 networks:
   default:
     external:
-      name: jenkins  # Use the existing network
+      name: jenkins
