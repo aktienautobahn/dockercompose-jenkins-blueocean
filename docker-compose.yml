@@ -1,4 +1,4 @@
-name: jenkins/jenkins
+version: '3.9'
 
 services:
   jenkins:
