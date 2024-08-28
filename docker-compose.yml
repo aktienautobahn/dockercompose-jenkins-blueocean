@@ -5,6 +5,8 @@ services:
     environment:
       JENKINS_OPTS: --httpPort=8080
     image: jenkins/jenkins:2.474-alpine-jdk21
+    networks:
+      default: null
     ports:
       - mode: ingress
         host_ip: 127.0.0.1
@@ -22,12 +24,11 @@ services:
         source: jenkins_data
         target: /var/jenkins_home
         volume: {}
-    networks:
-      - jenkins
 
 networks:
   default:
     name: jenkins
+    external: true
 volumes:
   jenkins_data:
     name: jenkins-dockercompose_jenkins_data
