@@ -28,7 +28,6 @@ services:
 networks:
   default:
     name: jenkins
-    external: true
 volumes:
   jenkins_data:
     name: jenkins-dockercompose_jenkins_data
